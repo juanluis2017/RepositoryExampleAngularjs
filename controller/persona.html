@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!--ng-app Bring the module-->
+<html ng-app="MyFirstModule">
+
+<HEAD>
+    <!--angular is the first reference of the file-->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="persona.js"></script>
+
+
+</HEAD>
+<!--bring the reference of the controller-->
+
+<body ng-controller="FirstController">
+    {{"nombre "+ nombre + apellido}}
+    <title>My first page in angular js</title>
+    <!--allow to update the value of varible in the controller-->
+    <input type="text" ng-model="nombre">
+
+ <input type="text" ng-model="nuevocomentario.usuario">
+   <input type="text" ng-model="nuevocomentario.curso">
+   <!--ng-click allow to invoque a function in the controller r-->
+    <button ng-click="enviarComentario()">Enviar</button>
+     <button ng-click="alerta(nombre)">alerta</button>
+    <!--allow to perform a for-each-->
+    <li ng-repeat="comentario in comentarios">
+
+        {{comentario.usuario +" "+ comentario.curso}}
+    </li>
+
+    <li ng-repeat="post in posts">
+
+        {{post.title +" "+ post.body}}
+    </li>
+
+<input type="text" ng-model="newpost.title">
+<textarea ng-model="newpost.body"></textarea>
+<button ng-click="addPost()">ADD post</button>
+
+</body>
+
+<footer></footer>
+
+</html>
